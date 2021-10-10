@@ -92,13 +92,28 @@ app.get("/todos/seed", (req, res) => {
   });
 });
 
-// Iindex Route
+// Index Route
 
 app.get("/todos", (req, res) => {
   Todo.find({}, (err, todos) => {
     res.render("todos/index.ejs", { todos });
   });
 });
+
+// New Route
+app.get("/todos/new", (req, res) => {
+  res.render("todos/new.ejs")
+});
+
+app.post("/todos", (req, res) => {
+  
+  req.body.completed = req.body.completed === "on" ? true : false
+ 
+  Todo.create(req.body, (err, todo) => {
+      // redirect the user back to the main fruits page after fruit created
+      res.redirect("/todos")
+  })
+})
 
 
 // Show Route

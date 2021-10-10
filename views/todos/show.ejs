@@ -8,18 +8,18 @@
         <article>
             <fieldset>
                 <legend>ACTIVITY DETAILS</legend>
-                <label>NAME:</label>            
-                <label><%=todo.name%></label>
-                <label>CATEGORY:</label>            
+                <label class="label">NAME:</label>   <label><%=todo.name%></label>         
+                
+                <label class="label">CATEGORY:</label>            
                 <label><%=todo.category%></label> 
-                <label>COMMENTS:</label>            
+                <label class="label">COMMENTS:</label>            
                 <label><%=todo.comment%></label>
-                <label>DATE TO START:</label>            
+                <label class="label">DATE TO START:</label>            
                 <label><%=todo.date_to_do%></label>
-                <label>DUE DATE:</label>            
+                <label class="label">DUE DATE:</label>            
                 <label><%=todo.due_date%></label>
-                <label>COMPLETED:</label>            
-                <label><%=todo.completed%></label>
+                <label class="label">COMPLETED:</label>            
+                <label class="label"><%=todo.completed%></label>
        
             </fieldset>
             <a  href="/todos/<%=todo._id%>/edit"><button>Edit</button></a>
