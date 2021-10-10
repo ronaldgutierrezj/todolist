@@ -113,7 +113,25 @@ app.post("/todos", (req, res) => {
       // redirect the user back to the main fruits page after fruit created
       res.redirect("/todos")
   })
-})
+});
+
+// edit route
+app.get("/todos/:id/edit", (req, res) => {
+  
+  const id = req.params.id
+  Todo.findById(id, (err, todo) => {
+      res.render("todos/edit.ejs", {todo})
+  })
+});
+
+//update route
+app.put("/todos/:id", (req, res) => {
+  const id = req.params.id
+  req.body.completed = req.body.completed === "on" ? true : false
+  Todo.findByIdAndUpdate(id, req.body, {new: true}, (err, todo) => {
+      res.redirect("/todos")
+  })
+});
 
 
 // Show Route
