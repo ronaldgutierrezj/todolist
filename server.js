@@ -115,6 +115,15 @@ app.post("/todos", (req, res) => {
   })
 });
 
+// Delete Route
+app.delete("/todos/:id", (req, res) => {
+  const id = req.params.id
+  Todo.findByIdAndRemove(id, (err, todo) => {
+      // redirect user back to index page
+      res.redirect("/todos")
+  })
+});
+
 // edit route
 app.get("/todos/:id/edit", (req, res) => {
   
