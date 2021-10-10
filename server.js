@@ -100,6 +100,20 @@ app.get("/todos", (req, res) => {
   });
 });
 
+
+// Show Route
+
+app.get("/todos/:id", (req, res) => {
+  // get the id from params
+  const id = req.params.id
+
+  // find the particular Todo from the database
+  Todo.findById(id, (err, todo) => {
+      // render the template with the data from the database
+      res.render("todos/show.ejs", {todo})
+  })
+})
+
 //___________________
 //Listener
 //___________________

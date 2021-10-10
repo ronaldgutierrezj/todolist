@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs")%>
+<body>
+    <%- include("../partials/header.ejs")%>  
+<main>
+    <div>
+        <article>
+            <fieldset>
+                <legend>ACTIVITY DETAILS</legend>
+                <label>NAME:</label>            
+                <label><%=todo.name%></label>
+                <label>CATEGORY:</label>            
+                <label><%=todo.category%></label> 
+                <label>COMMENTS:</label>            
+                <label><%=todo.comment%></label>
+                <label>DATE TO START:</label>            
+                <label><%=todo.date_to_do%></label>
+                <label>DUE DATE:</label>            
+                <label><%=todo.due_date%></label>
+                <label>COMPLETED:</label>            
+                <label><%=todo.completed%></label>
+       
+            </fieldset>
+            <a  href="/todos/<%=todo._id%>/edit"><button>Edit</button></a>
+            <form   action="/todos/<%=todo._id%>?_method=DELETE" method="post">
+            <input type="submit" value="Delete" />
+            </form>
+        </article>
+       
+    </div>
+</main>
+
+</body>
+</html>
