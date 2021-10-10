@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs")%>
+<body>
+    <%- include("../partials/header.ejs")%>  
+<main>
+    <div>
+        <a  href="/todos/new"><button>Add a New Activity</button></a>
+            <table>
+                <tr>
+                    <th>ACTIVITY</th>
+                    <th>COMPLETED?</th>
+                </tr>
+                <% for (todo of todos){%>
+                <tr>
+                    
+                    <td>
+                        <a href="/todos/<%= todo._id %>"><%= todo.name%></a>
+                    </td>
+                    <td>
+                        <a href="/todos/<%= todo._id %>"><%= todo.completed%></a>
+                    </td>
+                    
+                </tr>
+                <%}%>
+            </table>
+
+
+       
+
+    </div>
+</main>
+
+</body>
+</html>
