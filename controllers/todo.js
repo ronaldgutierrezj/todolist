@@ -8,6 +8,17 @@ const Todo = require("../models/todo")
 // Create Route
 /////////////////////////////////////////
 const router = express.Router()
+////////////////////////////////////////
+// Router Middleware
+////////////////////////////////////////
+// Authorization Middleware
+router.use((req, res, next) => {
+  if (req.session.loggedIn) {
+    next();
+  } else {
+    res.redirect("/user/login");
+  }
+});
 
 /////////////////////////////////////////
 // Routes
@@ -34,7 +45,7 @@ router.get("/seed", (req, res) => {
   // Index Route
   
   router.get("/", (req, res) => {
-    Todo.find({}, (err, todos) => {
+    Todo.find({username: req.session.username}, (err, todos) => {
       res.render("todos/index.ejs", { todos });
     });
   });
@@ -45,9 +56,8 @@ router.get("/seed", (req, res) => {
   });
   
   router.post("/", (req, res) => {
-    
     req.body.completed = req.body.completed === "on" ? true : false
-   
+    req.body.username = req.session.username
     Todo.create(req.body, (err, todo) => {
         // redirect the user back to the main fruits page after fruit created
         res.redirect("/todos")

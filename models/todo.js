@@ -17,7 +17,8 @@ const todoSchema = new Schema({
   comment: String,
   date_to_do: Date,
   due_date: Date,
-  completed: Boolean
+  completed: Boolean,
+  username: String
 })
 
 // make a todo model
