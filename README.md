@@ -1,8 +1,18 @@
 # todolist
 Todolist app is an aplication to help users tracking the daily tasks that appear on day basis.
 
-# Intallation
+# Installation
 It runs entirely within a web browser on a computer.
+
+# Technology
+Html5
+Ccs
+Javascript
+Express
+Mongoose
+Morgan
+Auth
+Heroku
 
 # Visuals
 Home page
