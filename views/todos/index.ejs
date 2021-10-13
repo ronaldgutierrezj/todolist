@@ -5,15 +5,19 @@
     <%- include("../partials/header.ejs")%>  
 <main>
     <div>
+        <div class="son">
         <a  href="/todos/new"><button>Add a New Activity</button></a>
         <a href="/user/logout"><button>Logout</button></a>
+        </div>
+        <div class="index">
             <table>
                 <tr>
                     <th>ACTIVITY</th>
                     <th>COMPLETED?</th>
                 </tr>
-                <% for (todo of todos){%>
-                <tr>
+                <% for (todo of todos){
+                    if(todo.completed === false) {%>
+                <tr class= "red">
                     
                     <td>
                         <a href="/todos/<%= todo._id %>"><%= todo.name%></a>
@@ -23,9 +27,22 @@
                     </td>
                     
                 </tr>
+                <%} else {%>
+                    <tr class= "green">
+                    
+                        <td>
+                            <a href="/todos/<%= todo._id %>"><%= todo.name%></a>
+                        </td>
+                        <td>
+                            <a href="/todos/<%= todo._id %>"><%= todo.completed%></a>
+                        </td>
+                        
+                    </tr>
+
+                <%}%>
                 <%}%>
             </table>
-
+        </div>
 
        
 

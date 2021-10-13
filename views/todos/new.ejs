@@ -4,7 +4,7 @@
 <body>
     <%- include("../partials/header.ejs")%>  
 <main>
-    <div>
+    <div class= "container">
         <form   action="/todos" method="post">
             <fieldset>
                 <legend>ADD A NEW ACTIVITY</legend>
@@ -17,12 +17,7 @@
                         type="text"
                         name="category"
                         placeholder="insert a category"/>
-                    </label>            
-                    <label class="label">COMMENTS:<input 
-                        type="text"
-                        name="comment"
-                        placeholder="describe the activity"/>
-                    </label>            
+                    </label>           
                     <label class="label">DATE TO START:<input 
                         type="date"
                         name="date_to_do"
@@ -32,7 +27,13 @@
                         type="date"
                         name="due_date"
                        />
-                    </label>            
+                    </label>   
+                    <label class="label">COMMENT:<textarea 
+                        name="comment" 
+                        rows="4" 
+                        cols="50"></textarea>
+                       
+                    </label>                     
                     <label class="label">COMPLETED:<input 
                         type="checkbox"
                         name="completed"

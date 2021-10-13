@@ -1,0 +1,124 @@
+header{
+    background-color: lightblue;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 80px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+main{
+    
+    margin: 40px auto 40px auto;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: ivory;
+    width: 1000px;
+    height: 500px;
+    border-radius: 30px;
+    border: 3px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;   
+}
+img{
+    width: 250px;
+    margin: 20px;}
+
+
+.button{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+}
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 20px;
+}
+body{
+    background:white;
+}
+
+fieldset{
+    height: 400px;
+}
+legend{
+    border-bottom: 3px solid black;
+}
+.signup{
+    margin:60px;
+}
+table{
+    width: 960px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    margin:0;
+}
+.red{
+    background-color: red;
+}
+tr{
+    height: 50px;
+}
+th{
+    padding:20px;
+}
+td{
+    padding: 20px;
+}
+.son{
+    align-content: center ;
+}
+.comment{
+    height: 100px;
+}
+.label{
+    width: 320px;
+}
+article{
+    height: 500px;
+}
+.show{
+    height: 300px;
+    margin: 50px;
+}
+.detail{
+    color: blue;
+}
+.varios{ 
+    display:flex;
+    justify-content: center;
+    align-items: center; }
+.delete{
+    width: 70px;
+    height: 50px;
+    display: inline-flex;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 10px;
+}
+.edit{
+    width: 100px;
+    display: inline-flex;
+    margin: 10px;
+}
+.son{
+    width: 960px;
+    margin: 0 auto 60px auto;
+    display: inline-flex;
+    justify-content: center;
+}
+.index{
+    width: 960px;
+    margin: 0 auto;
+    font-size: 30px;
+}
