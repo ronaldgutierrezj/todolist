@@ -1,4 +1,4 @@
-# todolist
+# Todolist
 Todolist app is an aplication to help users tracking the daily tasks that appear on day basis.
 
 # Installation
@@ -12,6 +12,7 @@ Express
 Mongoose
 Morgan
 Auth
+Boostrap
 Heroku
 
 # Visuals
